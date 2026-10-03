@@ -78,6 +78,9 @@ h2 {
 
 .sidebar {
   grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding: 16px;
   border-left: 1px solid var(--border);
   overflow-y: auto;
@@ -85,6 +88,80 @@ h2 {
 
 .muted {
   color: var(--muted);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+button.primary {
+  border-color: var(--accent);
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.draw-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.zone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.zone-item {
+  display: flex;
+  gap: 4px;
+}
+
+.zone-select {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+
+.zone-item.selected .zone-select {
+  border-color: var(--accent);
+}
+
+.zone-select .muted {
+  margin-left: auto;
+  font-size: 0.85em;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
 }
 
 @media (max-width: 760px) {
