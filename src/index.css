@@ -65,9 +65,15 @@ h2 {
 
 .map-area {
   grid-area: map;
-  display: grid;
-  place-items: center;
+  position: relative;
+  min-height: 0;
   background: var(--surface);
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+  font: inherit;
 }
 
 .sidebar {
@@ -77,8 +83,7 @@ h2 {
   overflow-y: auto;
 }
 
-.muted,
-.placeholder {
+.muted {
   color: var(--muted);
 }
 

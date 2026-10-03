@@ -7,5 +7,7 @@ export default defineConfig(({ command }) => ({
   plugins: [react()],
   test: {
     environment: 'jsdom',
+    // Stylesheets (e.g. Leaflet's) are irrelevant in jsdom; skip processing them.
+    css: false,
   },
 }))

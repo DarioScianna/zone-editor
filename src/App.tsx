@@ -1,3 +1,5 @@
+import { MapView } from './components/MapView.tsx'
+
 export function App() {
   return (
     <div className="layout">
@@ -5,7 +7,7 @@ export function App() {
         <h1>Zone editor</h1>
       </header>
       <main className="map-area" aria-label="Map">
-        <p className="placeholder">Map coming soon.</p>
+        <MapView />
       </main>
       <aside className="sidebar" aria-label="Zones and checks">
         <h2>Zones</h2>
